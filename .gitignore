@@ -1,3 +1,27 @@
 # Godot 4+ specific ignores
 .godot/
-/android/
+*.translation
+
+# Export builds
+export_presets.cfg
+
+# Imported assets (usually handled by Godot, but good to ignore source imports if using plugins)
+*.import
+
+# Mono/C# ignores (If you ever use C# in Godot, otherwise optional)
+.mono/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.tmp
+
+# System files (Mac/Windows garbage)
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files or logs
+logs/
+*.log
