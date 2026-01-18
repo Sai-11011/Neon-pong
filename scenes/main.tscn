@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b32k1s77sjr6g" path="res://scenes/paddle.tscn" id="1_0wfyh"]
 [ext_resource type="Script" uid="uid://dv7i433q4d5qm" path="res://Scripts/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://cwjhvcujueaxu" path="res://scenes/ball.tscn" id="2_sugp2"]
-[ext_resource type="FontFile" uid="uid://cwdilri6gbnjv" path="res://Assets/Audio/PressStart2P-Regular.ttf" id="4_jyhfs"]
+[ext_resource type="FontFile" uid="uid://cwdilri6gbnjv" path="res://Assets/Font/PressStart2P-Regular.ttf" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://02vm5ud0y3h5" path="res://scenes/camera_2d.gd" id="5_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://b0vsv2uyhib8r" path="res://Assets/Audio/score.wav" id="6_tefeu"]
 
@@ -48,10 +48,12 @@ scale = Vector2(10, 1)
 shape = SubResource("RectangleShape2D_sgp6g")
 
 [node name="Player1" parent="." instance=ExtResource("1_0wfyh")]
+modulate = Color(0, 0.5043968, 0.50439686, 1)
 position = Vector2(10, 360)
 collision_mask = 4
 
 [node name="Player2" parent="." instance=ExtResource("1_0wfyh")]
+modulate = Color(0.83593374, 0.00055331114, 0.83592826, 1)
 position = Vector2(1270, 360)
 collision_mask = 4
 paddle_id = 2
