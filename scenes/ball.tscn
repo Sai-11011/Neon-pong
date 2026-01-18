@@ -2,17 +2,11 @@
 
 [ext_resource type="Script" uid="uid://bbtsdo4poheia" path="res://Scripts/ball.gd" id="1_7s4qf"]
 [ext_resource type="AudioStream" uid="uid://bnsc1ks62c8vf" path="res://Assets/Audio/hit_wall.wav" id="2_cxlvu"]
+[ext_resource type="Texture2D" uid="uid://jtemxpmajc63" path="res://Assets/sprites/Particals.svg" id="2_f7cbr"]
 
-[sub_resource type="Gradient" id="Gradient_f7cbr"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4dx81"]
-gradient = SubResource("Gradient_f7cbr")
-width = 5
-height = 5
-fill = 2
-metadata/_snap_enabled = true
+[sub_resource type="Curve" id="Curve_f7cbr"]
+_data = [Vector2(0.02352941, 1), 0.0, 0.0, 0, 0, Vector2(0.5, 0.50561804), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_cxlvu"]
 offsets = PackedFloat32Array(0, 0.9930556)
@@ -26,13 +20,13 @@ collision_mask = 5
 script = ExtResource("1_7s4qf")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-amount = 150
-texture = SubResource("GradientTexture2D_4dx81")
-lifetime = 0.3
+amount = 100
+texture = ExtResource("2_f7cbr")
 draw_order = 1
-emission_shape = 1
-emission_sphere_radius = 6.0
 gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.6
+scale_amount_curve = SubResource("Curve_f7cbr")
 color_ramp = SubResource("Gradient_cxlvu")
 
 [node name="ColorRect" type="ColorRect" parent="."]
